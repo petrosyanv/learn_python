@@ -7,9 +7,17 @@ def quiz_main_function():
     print('YOU CHOSE QUIZ')
     function_list = [types_float, types_int, types_str, types_bool, types_list, types_dict, types_tuple,
                      types_list_more, answer_one, answer_two, answer_three, answer_four, answer_five,
-                     answer_six, answer_seven, answer_eight]
+                     answer_six, answer_seven, answer_eight, true_false_1, true_false_2, true_false_3(), true_false_4(),
+                     true_false_5(), true_false_6(), true_false_7(), true_false_8(), true_false_9(), true_false_10(),
+                     true_false_11(), true_false_12(), true_false_13(), true_false_14()]
     for i in range(len(function_list)):
         random.choice(function_list)()
+
+
+def rnd_color():
+    colors = [Fore.BLUE, Fore.GREEN, Fore.YELLOW, Fore.CYAN, Fore.MAGENTA, Fore.RED, Fore.LIGHTYELLOW_EX,
+              Fore.LIGHTBLUE_EX]
+    return random.choice(colors)
 
 
 def answer(right_answer: str):
@@ -118,3 +126,89 @@ def answer_eight():
     answer('1')
 
 
+def true_false_1():
+    print(Style.BRIGHT + "SELECT RIGHT OUTPUT: \n In Python, Dictionaries are immutable?")
+    print(rnd_color() + ' \t 1) True \t 2) False')
+    answer('1')
+
+
+def true_false_2():
+    print(Style.BRIGHT + "SELECT RIGHT OUTPUT: \n dict1 = {'key1':1, 'key2':2} \n dict2 = {'key2':2, 'key1:1} \n print(dict1 == dict2)")
+    print(rnd_color() + ' \t 1) True \t 2) False')
+    answer('1')
+
+
+def true_false_3():
+    print(Style.BRIGHT + 'Please select all correct ways to empty the following dictionary')
+    print(Style.BRIGHT + ' student = { \n\t"name": "Emma", \n\t"class": 9, \n\t"marks": 75 \n}')
+    print(rnd_color() + ' \t 1)  del student \t 2) del student[0:2] \t 3) student.clear()')
+    answer('3')
+
+
+def true_false_4():
+    print(Style.BRIGHT + "SELECT RIGHT OUTPUT: \n Select correct ways to create an empty dictionary")
+    print(rnd_color() + ' \t 1)  sampleDict = {} \t 2) sampleDict = () \t 3) sampleDict = dict{}')
+    answer('1')
+
+
+def true_false_5():
+    print(Style.BRIGHT + "SELECT RIGHT OUTPUT: \n  Items are accessed by their position in a dictionary and All the keys in a dictionary must be of the same type.")
+    print(rnd_color() + ' \t 1) True \t 2) False')
+    answer('2')
+
+
+def true_false_6():
+    print(Style.BRIGHT + "SELECT RIGHT OUTPUT: \n Select all correct ways to copy a dictionary in Python")
+    print(rnd_color() + ' \t 1)  dict2 = dict1.copy() \t 2) dict2.append(dict1) \t 3) dict2 = dict1')
+    answer('1')
+
+
+def true_false_7():
+    print(Style.BRIGHT + 'SELECT RIGHT OUTPUT:\n dict1 = {"name": "Mike", "salary": 8000}\n temp = dict1.pop("age")\n print(temp)')
+    print(rnd_color() + ' \t 1)  KeyError: ‘age’ \t 2) None')
+    answer('1')
+
+
+def true_false_8():
+    print(Style.BRIGHT + 'Select the correct way to print Emma’s age.')
+    print(Style.BRIGHT + "SELECT RIGHT OUTPUT: \n student = {1: {'name': 'Emma', 'age': '27', 'sex': 'Female'}, \n\t2: {'name': 'Mike', 'age': '22', 'sex': 'Male'}}")
+    print(rnd_color() + ' \t 1) student[0][1] \t 2) student[1]["age"] \t 3) student[0]["age"]')
+    answer('2')
+
+
+def true_false_9():
+    print(Style.BRIGHT + 'Select the correct ways to get the value of marks key.')
+    print(Style.BRIGHT + 'SELECT RIGHT OUTPUT: \n student = {\n\t"name": "Emma",\n\t"class": 9,\n\t"marks": 75}')
+    print(rnd_color() + " \t1)  m = student.get(2)\t2) m = student.get('marks')\t3) m = student[2])")
+    answer('2')
+
+
+def true_false_10():
+    print(Style.BRIGHT + 'SELECT RIGHT OUTPUT: \n dict1 = {"name": "Mike", "salary": 8000} \n temp = dict1.get("age") \n print(temp)')
+    print(rnd_color() + ' \t 1)  KeyError: ‘age’ \t 2) None')
+    answer('2')
+
+
+def true_false_11():
+    print(Style.BRIGHT + 'Select the all correct way to remove the key marks from a dictionary')
+    print(Style.BRIGHT + 'SELECT RIGHT OUTPUT: \n student = { \n\t"name": "Emma", \n\t"class": 9, \n\t"marks": 75 \n}')
+    print(rnd_color() + ' \t 1) student.pop("marks") \t 2) student.remove("marks") \t 3)student.popitem("marks")')
+    answer('1')
+
+
+def true_false_12():
+    print(Style.BRIGHT + "SELECT RIGHT OUTPUT: \ndef fun1(num): \n\treturn num + 25\n\nfun1(5)\nprint(num)")
+    print(rnd_color() + ' \t 1) 25 \t 2) 5 \t 3)NameError')
+    answer('3')
+
+
+def true_false_13():
+    print(Style.BRIGHT + "SELECT RIGHT OUTPUT: \ndef fun1(name, age=20): \n\tprint(name, age)\n\nfun1('Emma', 25)")
+    print(rnd_color() + ' \t 1) Emma 25 \t 2) Emma 20')
+    answer('1')
+
+
+def true_false_14():
+    print(Style.BRIGHT + "SELECT RIGHT OUTPUT: \ndef add(a, b): \n\treturn a+5, b+5\n\nresult = add(3, 2)\nprint(result)")
+    print(rnd_color() + ' \t 1) 15 \t 2) 8 \t 3) (8,7) \t 4) SyntaxError')
+    answer('3')
